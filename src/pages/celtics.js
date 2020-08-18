@@ -46,7 +46,7 @@ function Celtics() {
                         4 Time All-Star <br/>
                         1 All-NBA 3rd Team
                     </span>
-                    <span className="line1" />
+                    <span className="line3" />
                 </span>
             </div>
 
@@ -81,7 +81,7 @@ function Celtics() {
                         4 Time All-Star <br/>
                         1 All-NBA 3rd Team
                     </span>
-                    <span className="line1" />
+                    <span className="line3" />
                 </span>
             </div>
             

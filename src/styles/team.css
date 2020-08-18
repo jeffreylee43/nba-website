@@ -58,15 +58,16 @@ html{
 }
 
 .stat1 {
-    position: relative;
-    top: 30px;
-    left: 2rem;
+    position: absolute;
+    top: 25px;
+    left: 130px;
 }
 
 .line1 {
     display: block;
-    max-width: 12vw;
+    max-width: 100px;
     height: 2px;
+    margin-top: 50px;
     background-color: white;    
 }
 
@@ -93,9 +94,9 @@ html{
 }
 
 .stat2 {
-    position: relative;
+    position: absolute;
     top: -50px;
-    left: -22vw;
+    left: -100px;
 }
 
 .line2 {
@@ -129,7 +130,26 @@ html{
 }
 
 .stat3 {
+    position: absolute;
+    top: 25px;
+    left: 120px;
+}
+
+.line3 {
+    display: block;
+    max-width: 100px;
+    height: 2px;
+    margin-top: 80px;
+    background-color: white;    
+}
+
+.line3::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
     position: relative;
-    top: 30px;
-    left: 1rem;
+    top: -2px;
+    background-color: white;
+    border-radius: 50%;
 }

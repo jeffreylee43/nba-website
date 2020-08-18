@@ -1,38 +1,96 @@
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url(./font/Avenir-Heavy.ttf);
+}
+
+body {
+  background-color: rgb(15,15,15);
+  transition: background-color 1s;
+}
+
 .App {
+  margin: 40px 0;
+}
+
+.title {
   text-align: center;
+  color: white;
+  font-family: Avenir-Heavy;
+  font-size: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.caption {
+  color: grey;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h2 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.division {
+  padding-bottom: 125px;
 }
 
-@keyframes App-logo-spin {
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background-color: rgb(32, 32, 32);
+  transition: background-color 1s;
+  padding: 20px;
+  margin: 10px;
+  width: 25%;
+  border-radius: 5px;
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.Logo {
+  transform: scale(0.65);
+  width: 100%;
+  z-index: 5;
+  opacity: 1;
+}
+
+.player {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+}
+
+.player:hover {
+  opacity: 0.5;
+  animation: playerAnim 1.2s;
+}
+
+
+@keyframes playerAnim {
   from {
-    transform: rotate(0deg);
+    transform: scale(2);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

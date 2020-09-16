@@ -2,7 +2,7 @@
   "name": "sports-design",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jeffreylee43.github.io/nba-website",
+  "homepage": "http://jeffreylee43.github.io/nba-website/src/home.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

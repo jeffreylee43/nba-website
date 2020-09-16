@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Celtics from "./pages/celtics";
 import Home from "./home";
-import Navigation from "./Navigation";
+import Navigation from "./NavigationDraft";
 
 
 // import './App.css';

@@ -10,9 +10,31 @@ html{
 .page {
 }
 
+/* header {
+    position: relative;
+    background-color: green;
+    height: 80vh;
+} */
+
+iframe {
+    overflow: hidden;
+    position:absolute;
+    top: 0px;
+    width:100%;
+    height: 150%;
+    z-index: 0;
+    opacity: 0.7;
+}
+
 .spacing {
     height: 100px;
 }
+
+/* header.team-header {
+    height: 100vh;
+    background-image: url("../roster-images/celtics/celtics-header.jpg");
+    background-size: 100% 100%;
+} */
 
 .team {
     transform: scale(0.4);
@@ -23,6 +45,8 @@ html{
 .title {
     color: white;
     margin-top: -150px;
+    position: relative;
+    z-index: 10;
 }
 
 .member {
@@ -135,7 +159,7 @@ html{
     left: 120px;
 }
 
-.line3 {
+/* .line3 {
     display: block;
     max-width: 100px;
     height: 2px;
@@ -152,4 +176,4 @@ html{
     top: -2px;
     background-color: white;
     border-radius: 50%;
-}
+} */

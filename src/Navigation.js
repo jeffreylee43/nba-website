@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom'
-import {HashLink} from 'react-router-hash-link'
-import styled from 'styled-components'
-import "./Navigation.css"
+import {NavLink} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
+import styled from 'styled-components';
+import "./Navigation.css";
+import NavLinks from "./Navlinks";
 
 const Navbar = styled.div`
     margin: 0 auto;
@@ -15,7 +16,7 @@ const Navbar = styled.div`
     justify-content: space-between;
 
     @media (max-width: 768px) {
-        height: 50px;
+        height: 60px;
     }
 `
 
@@ -25,6 +26,25 @@ const SubMenu = styled.div`
     background-color: black;
     position: fixed;
     z-index: 99999;
+`
+
+const StyledHamburger = styled.div`
+  overflow: visible;
+  margin: 0 -12px 0 0;
+  padding: 15px;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `
 
 
@@ -45,6 +65,7 @@ function Navigation() {
             <HashLink exact to="/#Northwest" className="navlink" activeClassName="navlink-active">Northwest</HashLink>
             <HashLink exact to="/#Pacific" className="navlink" activeClassName="navlink-active">Pacific</HashLink>
             <HashLink exact to="/#Southwest" className="navlink" activeClassName="navlink-active">Southwest</HashLink>
+            {/* <NavLinks /> */}
         </Navbar>
     )
 }

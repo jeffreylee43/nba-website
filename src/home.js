@@ -107,7 +107,7 @@ function Home() {
 
 
     return (
-      <div className="Page">
+      <div className="Page" id="home">
         <header className="title">
           NBA Teams
           <p className="caption">Select an NBA team and check out their roster...</p>

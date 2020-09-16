@@ -9,14 +9,15 @@ const Navbar = styled.div`
     margin: 0 auto;
     background-color: rgb(50,50,50);
     position: sticky;
-    top: 0px;
+    position: -webkit-sticky;
+    top: 0;
     padding: 5px 30px;
     z-index: 99999;
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 768px) {
-        height: 50px;
+      height: 50px;
     }
 `
 
@@ -44,7 +45,7 @@ const NavSide = styled.div`
   height: 82%;
   justify-content: flex-end;
   align-items: center;
-  overflow-y: ${props => (props.open ? "visible" : "scroll")};
+  // overflow-y: ${props => (props.open ? "visible" : "scroll")};
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -109,6 +110,7 @@ const useViewport = () => {
     return { width };
 }
 
+
 function Navigation() {
     // const [hoverAtlantic, setAtlantic] = useState(false);
     // const [hoverCentral, setCentral] = useState(false);
@@ -122,16 +124,44 @@ function Navigation() {
     const { width } = useViewport();
     const breakpoint = 768;
 
+    // const [windowOffset, setWindowOffset] = useState(0);
+    // const handleScroll = () => {
+    //   const position = window.scrollY;
+    //   setWindowOffset(position);
+    //   console.log(windowOffset);
+    // }
+
+    // React.useEffect(() => {
+    //   window.addEventListener('scroll', handleScroll);
+      
+    //   return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    //   };
+    
+    // }, []);
+
+    // function noScroll() {
+    //   document.body.setAttribute('style', `top: -${windowOffset}px; position: fixed;`);
+    // }
+  
+    // function Scroll() {
+    //   document.body.style.position = '';
+    //   document.body.style.top = '';
+    //   window.scrollTo(0, windowOffset);
+    // }
 
     function noScroll() {
-      document.body.setAttribute('style', `position: fixed; top: -${window.scrollY}px`);
+      // document.body.setAttribute('style', `position: fixed; top: -${window.scrollY}px`);
+      document.body.style.overflow = 'hidden';
     }
   
     function Scroll() {
-      const ScrollPosition = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      window.scrollTo(0, parseInt(ScrollPosition || '0') * -1);
+      // const ScrollPosition = document.body.style.top;
+      // document.body.style.position = '';
+      // document.body.style.top = '';
+      // window.scrollTo(0, parseInt(ScrollPosition || '0') * -1);
+      document.body.style.overflow = '';
+      
     }
 
     function handleChildClick(newnavbarOpen, newmodalOpen) {
@@ -142,7 +172,7 @@ function Navigation() {
     return (
         width > breakpoint ? (
         <Navbar>
-            <NavLink exact to="/" className="navlink" activeClassName="navlink-active">Home</NavLink>
+            <NavLink exact to="/#home" className="navlink" activeClassName="navlink-active">Home</NavLink>
             <HashLink exact to="/#Atlantic" className="navlink" activeClassName="navlink-active">Atlantic</HashLink>
             <HashLink exact to="/#Central" className="navlink" activeClassName="navlink-active">Central</HashLink>
             <HashLink exact to="/#Southeast" className="navlink" activeClassName="navlink-active">Southeast</HashLink>

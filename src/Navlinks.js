@@ -13,7 +13,7 @@ function NavLinks({navbarOpen, modalOpen, onChildClick}) {
 
     return(
         <>
-            <NavLink exact to="/" className="navlink" activeClassName="navlink-active" onClick={handleClick}>Home</NavLink>
+            <HashLink exact to="/#home" className="navlink" activeClassName="navlink-active" onClick={handleClick}>Home</HashLink>
             <HashLink exact to="/#Atlantic" className="navlink" activeClassName="navlink-active" onClick={handleClick}>Atlantic</HashLink>
             <HashLink exact to="/#Central" className="navlink" activeClassName="navlink-active" onClick={handleClick}>Central</HashLink>
             <HashLink exact to="/#Southeast" className="navlink" activeClassName="navlink-active" onClick={handleClick}>Southeast</HashLink>

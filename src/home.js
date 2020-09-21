@@ -111,6 +111,8 @@ function Home() {
         <header className="title">
           NBA Teams
           <p className="caption">Select an NBA team and check out their roster...</p>
+          <p className="caption" style={{color: "#ffcccb", fontSize: "25px"}}>Currently, I have only implemented the Boston Celtics roster!</p>
+          <p className="caption" style={{color: "#ffcccb", fontSize: "25px"}}>Check back again when I update the rest of the NBA rosters!</p>
         </header>
 
 
